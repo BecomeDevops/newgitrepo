@@ -44,6 +44,7 @@ echo "testing the code"
 steps {
 
 echo "deploying the code"
+  sh 'java -jar target/*.jar'
   
 }
 
