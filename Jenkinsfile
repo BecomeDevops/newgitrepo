@@ -44,7 +44,7 @@ echo "testing the code"
 steps {
 
 echo "deploying the code"
-  sh 'nohup java -jar target/*.jar'
+  sh 'nohup java -jar target/*.jar & sleep 10'
   
 }
 
