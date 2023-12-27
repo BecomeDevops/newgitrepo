@@ -10,6 +10,7 @@ stage('git clone') {
   steps {
 
 echo "cloning the code repo from github"
+git branch: 'main', url: 'https://github.com/BecomeDevops/spring-petclinic.git'
     
   }
 
@@ -19,6 +20,7 @@ echo "cloning the code repo from github"
     stage('Build') {
    steps {
     echo "build the code and creating a jar file"
+    sh './mvnw package' 
 
      
    }
