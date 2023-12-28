@@ -48,6 +48,7 @@ echo "deploying the code"
   
 }
 
+    }
  stage('upload artifact') {
         steps {
 
