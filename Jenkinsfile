@@ -57,7 +57,7 @@ echo "deploying the code"
         protocol: 'http',
         nexusUrl: '54.183.5.231:8081',
         groupId: 'org.springframework',
-        version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
+        version: '2.4.5',
         repository: 'jarvisartifactrepo',
         credentialsId: 'nexuslogin',
         artifacts: [
