@@ -63,7 +63,7 @@ echo "deploying the code"
         artifacts: [
             [artifactId: spring-petclinic,
              classifier: '',
-             file: 'target/*.jar',
+             file: 'target/spring-petclinic-2.4.5.jar',
              type: 'jar']
         ]
      )
