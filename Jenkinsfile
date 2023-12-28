@@ -48,9 +48,7 @@ echo "deploying the code"
   
 }
 
- stage('upload artifact')
-
-      {
+ stage('upload artifact') {
         steps {
 
        nexusArtifactUploader(
