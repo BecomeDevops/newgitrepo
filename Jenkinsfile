@@ -49,29 +49,7 @@ echo "deploying the code"
 }
 
     }
- stage('upload artifact') {
-        steps {
-
-       nexusArtifactUploader(
-        nexusVersion: 'nexus3',
-        protocol: 'http',
-        nexusUrl: '54.183.5.231:8081',
-        groupId: 'org.springframework',
-        version: '2.4.5',
-        repository: 'jarvisartifactrepo',
-        credentialsId: 'nexuslogin',
-        artifacts: [
-            [artifactId: 'spring-petclinic',
-             classifier: '',
-             file: 'target/spring-petclinic-2.4.5.jar',
-             type: 'jar']
-        ]
-     )
-
-      
-    }
-      }
-
+ 
     
 
 
