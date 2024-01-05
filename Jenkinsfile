@@ -35,9 +35,44 @@ steps {
 
 echo "testing the code"
   
+  
 }
       
     }
+
+
+    stage('sonar analysis') {
+
+
+      steps {
+    withSonarQube('sonarserver') {
+sh ''' $SCANNER_HOME/bin/sonarscanner -Dsonar.projectName=spring-petclinic \
+-Dsonar.projectKey=spring-petclinic '''
+
+    }
+        
+        
+
+        
+      }
+      echo "checking analysis "
+    }
+
+    stage('sonar quality gates') {
+
+
+      steps {
+echo "quality gate metrics "
+       script {
+      
+
+waitForQualityGate abortPipeline: false, credentialsId: 'sonartoken'
+         
+       }
+      }
+    }
+
+    
 
     stage('deploy') {
 
