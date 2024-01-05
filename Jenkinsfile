@@ -58,7 +58,7 @@ echo "testing the code"
         
       }
    
-    }
+    
 
     stage('sonar quality gates') {
 
