@@ -65,13 +65,19 @@ echo "testing the code"
 
       steps {
 echo "quality gate metrics "
-       script {
-      
-
-waitForQualityGate abortPipeline: false, credentialsId: 'sonartoken'
-         
-       }
+       
       }
+    }
+
+    stage('Dockerize') {
+
+steps {
+
+echo "dockerizze"
+  
+}
+
+      
     }
 
     
@@ -81,7 +87,7 @@ waitForQualityGate abortPipeline: false, credentialsId: 'sonartoken'
 steps {
 
 echo "deploying the code"
-  sh 'nohup java -jar target/*.jar & sleep 10'
+ # sh 'nohup java -jar target/*.jar & sleep 10'
   
 }
 
