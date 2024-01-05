@@ -45,10 +45,11 @@ echo "testing the code"
 
 
       steps {
-    echo "checking analysis "
-    withSonarQubeEnv('sonarserver') {
-sh ''' $SCANNER_HOME/bin/sonarscanner -Dsonar.projectName=spring-petclinic \
--Dsonar.projectKey=spring-petclinic '''
+  sh "mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=spring-petclinic \
+  -Dsonar.projectName='spring-petclinic' \
+  -Dsonar.host.url=http://13.52.230.174:9000 \
+  -Dsonar.token=sqp_79abaa658c13b3fd837872f05de2cdf99094dc92"
 
     }
         
