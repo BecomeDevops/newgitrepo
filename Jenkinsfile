@@ -65,6 +65,11 @@ echo "testing the code"
 
       steps {
 echo "quality gate metrics "
+
+        script {
+
+          
+        }
        
       }
     }
@@ -103,7 +108,7 @@ nexusArtifactUploader(
         nexusUrl: '54.219.60.86:8081',
         groupId: 'org.springframework',
         version: '2.4.5',
-        repository: 'springproject-repo',
+        repository: 'code-repo',
         credentialsId: 'nexuscreds',
         artifacts: [
             [artifactId: 'spring-petclinic',
