@@ -105,7 +105,7 @@ nexusArtifactUploader(
         nexusUrl: '54.219.60.86:8081',
         groupId: 'org.springframework',
   
-        version: version("2.4.${env.BUILD_NUMBER}"),
+        version: "2.4.${env.BUILD_NUMBER}",
         repository: 'code-repo',
         credentialsId: 'nexuscreds',
         artifacts: [
