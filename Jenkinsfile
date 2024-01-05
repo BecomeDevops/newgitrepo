@@ -46,7 +46,7 @@ echo "testing the code"
 
       steps {
     echo "checking analysis "
-    withSonarQube('sonarserver') {
+    withSonarQubeEnv('sonarserver') {
 sh ''' $SCANNER_HOME/bin/sonarscanner -Dsonar.projectName=spring-petclinic \
 -Dsonar.projectKey=spring-petclinic '''
 
