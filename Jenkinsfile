@@ -87,7 +87,7 @@ echo "dockerizze"
 steps {
 
 echo "deploying the code"
- # sh 'nohup java -jar target/*.jar & sleep 10'
+  /* # sh 'nohup java -jar target/*.jar & sleep 10' */
   
 }
 
