@@ -66,10 +66,7 @@ echo "testing the code"
       steps {
 echo "quality gate metrics "
 
-        script {
-
-          
-        }
+        
        
       }
     }
