@@ -45,19 +45,7 @@ echo "testing the code"
         
 
         
-      stage('SONARAnalysis') {
-       steps {
-
-mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=spring-petclinic \
-  -Dsonar.projectName='spring-petclinic' \
-  -Dsonar.host.url=http://54.67.112.31:9000 \
-  -Dsonar.token=sqp_163f686a74903d9d57a294d6914acb06a65ab016
-         
-       }
-
-        
-      }
+      
    
     
 
