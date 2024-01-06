@@ -41,18 +41,7 @@ echo "testing the code"
     }
 
 
-    stage('sonar analysis') {
-
-
-      steps {
-  sh "mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=spring-petclinic \
-  -Dsonar.projectName='spring-petclinic' \
-  -Dsonar.host.url=http://13.52.230.174:9000 \
-  -Dsonar.token=sqp_79abaa658c13b3fd837872f05de2cdf99094dc92"
-
-    }
-        
+  
         
 
         
@@ -60,16 +49,6 @@ echo "testing the code"
    
     
 
-    stage('sonar quality gates') {
-
-
-      steps {
-echo "quality gate metrics "
-
-        
-       
-      }
-    }
 
     stage('Dockerize') {
 
