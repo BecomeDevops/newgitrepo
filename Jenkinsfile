@@ -31,11 +31,11 @@ git branch: 'main', url: 'https://github.com/BecomeDevops/spring-petclinic.git'
 stage('SONARAnalysis') {
        steps {
 
-sh 'mvn clean verify sonar:sonar \
+sh "mvn clean verify sonar:sonar \
   -Dsonar.projectKey=spring-petclinic \
   -Dsonar.projectName='spring-petclinic' \
   -Dsonar.host.url=http://54.67.112.31:9000 \
-  -Dsonar.token=sqp_163f686a74903d9d57a294d6914acb06a65ab016'
+  -Dsonar.token=sqp_163f686a74903d9d57a294d6914acb06a65ab016"
          
        }
 
