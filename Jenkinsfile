@@ -45,7 +45,7 @@ echo "testing the code"
         
 
         
-      stage('SONAR Analysis') {
+      stage('SONARAnalysis') {
        steps {
 
 mvn clean verify sonar:sonar \
